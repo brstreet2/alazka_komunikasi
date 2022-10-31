@@ -43,15 +43,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- End Font Awesome CSS CDN -->
 
-    <!-- Local Animate on Scroll CSS -->
-    <link rel="stylesheet" href="assets/vendor/aos-master/dist/aos.css">
-    <!-- End Local Animate on Scroll CSS -->
-
-    <!-- Slick CSS CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- End Slick CSS CDN -->
-
-    @stack('css')
+@stack('css')
 
 </head>
 
@@ -279,30 +271,6 @@
     </script>
     <!-- End Local Font Awesome JS Fallback -->
 
-    <!-- ImagesLoaded JS CDN -->
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <!-- End ImagesLoaded JS CDN -->
-
-    <!-- ImagesLoaded JS Fallback -->
-    <script>
-        if (typeof($.fn.imagesLoaded) === 'undefined') {
-            document.write('<script src="assets/vendor/imagesLoaded/imagesloaded.pkgd.min.js"><\/script>')
-        }
-    </script>
-    <!-- End ImagesLoaded JS Fallback -->
-
-    <!-- MasonryJS CDN -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <!-- End MasonryJS CDN -->
-
-    <!-- Local Masonry JS Fallback -->
-    <script>
-        if (!$.isFunction($.fn.masonry)) {
-            document.write('<script src="assets/vendor/masonry/masonry.pkgd.min.js"><\/script>')
-        }
-    </script>
-    <!-- End Local Masonry JS Fallback -->
-
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
@@ -317,39 +285,8 @@
     </script>
     <!-- End Local Boostrap JS Fallback -->
 
-    <!-- Isotope JS CDN -->
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <!-- End Isotope JS CDN -->
+@stack('scrips')
 
-    <!-- Local Isotope JS Fallback -->
-    <script>
-        if (!$.isFunction($.fn.isotope)) {
-            document.write('<script src="assets/vendor/isotopejs/isotope.pkgd.min.js"><\/script>')
-        }
-    </script>
-    <!-- End Local Isotope JS Fallback -->
-
-    <!-- Local Animate on Scroll JS -->
-    <script src="assets/vendor/aos-master/dist/aos.js"></script>
-    <!-- End Local Animate on Scroll JS -->
-
-    <!-- Slick JS CDN -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- End Slick JS CDN -->
-
-    <!-- Local Slick JS Fallback -->
-    <script>
-        if (!$.isFunction($.fn.slick)) {
-            document.write('<script src="assets/vendor/slick/slick/slick.min.js"><\/script>')
-        }
-    </script>
-    <!-- End Local Slick JS Fallback -->
-
-    <!-- App.JS -->
-    <script src="assets/js/app.js"></script>
-    <!-- End App.JS -->
-
-    @stack('scrips')
 </body>
 
 </html>

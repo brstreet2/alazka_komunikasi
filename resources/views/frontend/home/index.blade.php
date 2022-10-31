@@ -310,3 +310,89 @@
     </div>
     <!-- End Work with Us -->
 @endsection
+@push('css')
+    <!-- Local Animate on Scroll CSS -->
+    <link rel="stylesheet" href="assets/vendor/aos-master/dist/aos.css">
+    <!-- End Local Animate on Scroll CSS -->
+
+    <!-- Slick CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- End Slick CSS CDN -->
+@endpush
+@push('scrips')
+   <!-- ImagesLoaded JS CDN -->
+   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+   <!-- End ImagesLoaded JS CDN -->
+
+   <!-- ImagesLoaded JS Fallback -->
+   <script>
+       if (typeof($.fn.imagesLoaded) === 'undefined') {
+           document.write('<script src="assets/vendor/imagesLoaded/imagesloaded.pkgd.min.js"><\/script>')
+       }
+   </script>
+   <!-- End ImagesLoaded JS Fallback -->
+
+   <!-- MasonryJS CDN -->
+   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+   <!-- End MasonryJS CDN -->
+
+   <!-- Local Masonry JS Fallback -->
+   <script>
+       if (!$.isFunction($.fn.masonry)) {
+           document.write('<script src="assets/vendor/masonry/masonry.pkgd.min.js"><\/script>')
+       }
+   </script>
+   <!-- End Local Masonry JS Fallback -->
+    <!-- Isotope JS CDN -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- End Isotope JS CDN -->
+
+    <!-- Local Isotope JS Fallback -->
+    <script>
+        if (!$.isFunction($.fn.isotope)) {
+            document.write('<script src="assets/vendor/isotopejs/isotope.pkgd.min.js"><\/script>')
+        }
+    </script>
+    <!-- End Local Isotope JS Fallback -->
+
+    <!-- Local Animate on Scroll JS -->
+    <script src="assets/vendor/aos-master/dist/aos.js"></script>
+    <!-- End Local Animate on Scroll JS -->
+
+    {{-- Page Script --}}
+    <script>
+        $(document).ready(function () {
+            $('.masonry').masonry({
+            itemSelector: '.masonry-item',
+            columnWidth: 200,
+            gutter: 20,
+            columnWidth: ".masonry-sizer",
+            percentPostition: true
+            });
+
+            $('.btn-to-top').on('click', function() {
+                $('html', 'body').animate({ 
+                    scrollTop: "0",
+                }, 1500);
+            });
+
+            AOS.init();
+
+            const portfolioIstope = $('.portfolio-container').isotope({ 
+                itemSelector: '.portfolio-item',
+            });
+
+            $('.portfolio-filters li').on('click', function(){ 
+                $('.portfolio-filters li').removeClass('filter-active');
+                $(this).addClass("filter-active");
+                //  Isotope Filtering
+                portfolioIstope.isotope({ 
+                    filter: $(this).data('filter'),
+                });
+                //  End Isotope Filtering
+                // AOS Re-initialization
+                AOS.init();
+            });
+        });
+    </script>
+@endpush

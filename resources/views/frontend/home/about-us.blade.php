@@ -160,5 +160,81 @@
     </div>
     <!-- End Slick Slider -->
 @endsection
+@push('css')
+    <!-- Local Animate on Scroll CSS -->
+    <link rel="stylesheet" href="assets/vendor/aos-master/dist/aos.css">
+    <!-- End Local Animate on Scroll CSS -->
+
+    <!-- Slick CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- End Slick CSS CDN -->
+@endpush
+@push('scrips')
+    <!-- Local Animate on Scroll JS -->
+    <script src="assets/vendor/aos-master/dist/aos.js"></script>
+    <!-- End Local Animate on Scroll JS -->
+
+    <!-- Slick JS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- End Slick JS CDN -->
+
+    <!-- Local Slick JS Fallback -->
+    <script>
+        if (!$.isFunction($.fn.slick)) {
+            document.write('<script src="assets/vendor/slick/slick/slick.min.js"><\/script>')
+        }
+    </script>
+    <!-- End Local Slick JS Fallback -->
+
+    {{-- Page Script --}}
+    <script>
+        $(document).ready(function () {
+            $('.slider-slider').slick({
+                lazyLoad: 'ondemand',
+                arrows: true,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+                ]
+            });
+            AOS.init();
+            
+            $('.btn-to-top').on('click', function() {
+                $('html', 'body').animate({ 
+                    scrollTop: "0",
+                }, 1500);
+            });
+        });
+    </script>
+@endpush
 
 

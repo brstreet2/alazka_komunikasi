@@ -167,4 +167,27 @@
     </div>
 </div>
 <!-- End Business Process -->
-@endsection  
+@endsection
+@push('css')
+    <!-- Local Animate on Scroll CSS -->
+    <link rel="stylesheet" href="assets/vendor/aos-master/dist/aos.css">
+    <!-- End Local Animate on Scroll CSS -->    
+@endpush
+@push('scrips')
+    <!-- Local Animate on Scroll JS -->
+    <script src="assets/vendor/aos-master/dist/aos.js"></script>
+    <!-- End Local Animate on Scroll JS -->
+
+    {{-- Page Script --}}
+    <script>
+        $(document).ready(function () {
+            $('.btn-to-top').on('click', function() {
+                $('html', 'body').animate({ 
+                    scrollTop: "0",
+                }, 1500);
+            });
+            
+            AOS.init();
+        });
+    </script>
+@endpush  
