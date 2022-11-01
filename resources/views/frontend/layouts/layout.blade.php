@@ -43,7 +43,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- End Font Awesome CSS CDN -->
 
-@stack('css')
+    @stack('css')
 
 </head>
 
@@ -285,7 +285,7 @@
     </script>
     <!-- End Local Boostrap JS Fallback -->
 
-@stack('scrips')
+    @stack('scrips')
 
 </body>
 

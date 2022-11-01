@@ -19,13 +19,11 @@
                 <img src="assets/img/banner.png" class="d-block w-100 carousel-img" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -90,8 +88,7 @@
             </p>
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <div class="card border-0 text-center p-4 mt-3 h-100" data-aos="zoom-in"
-                        data-aos-duration="1000">
+                    <div class="card border-0 text-center p-4 mt-3 h-100" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card-body">
                             <div class="card-icon">
                                 <i class="fa-solid fa-eye fa-2xl"></i>
@@ -108,8 +105,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card border-0 text-center p-4 mt-3 h-100" data-aos="zoom-in"
-                        data-aos-duration="1000">
+                    <div class="card border-0 text-center p-4 mt-3 h-100" data-aos="zoom-in" data-aos-duration="1000">
                         <div class="card-body">
                             <div class="card-icon">
                                 <i class="fa-solid fa-rocket fa-2xl"></i>
@@ -188,7 +184,7 @@
 
     {{-- Page Script --}}
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.slider-slider').slick({
                 lazyLoad: 'ondemand',
                 arrows: true,
@@ -197,44 +193,41 @@
                 speed: 300,
                 slidesToShow: 4,
                 slidesToScroll: 4,
-                responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
                     }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
                 ]
             });
             AOS.init();
-            
+
             $('.btn-to-top').on('click', function() {
-                $('html', 'body').animate({ 
+                $('html', 'body').animate({
                     scrollTop: "0",
                 }, 1500);
             });
         });
     </script>
 @endpush
-
-
