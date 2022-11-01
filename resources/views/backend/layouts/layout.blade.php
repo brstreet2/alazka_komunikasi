@@ -90,8 +90,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="/lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="/lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
                 <span class="brand-text font-weight-light">ALAZKA Komunikasi</span>
             </a>
 
@@ -474,90 +474,90 @@
             <!-- /.sidebar -->
         </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-<!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-end">
-              <li class="breadcrumb-item"><a href="{{ route('auth.dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">@yield('title')</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="{{ route('auth.dashboard') }}">Home</a></li>
+                                <li class="breadcrumb-item active">@yield('title')</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
 
-    <!-- Main content -->
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card card-primary card-outline">
-                        <div class="card-header">
-                            <h5 class="m-0">
-                                @yield('title')
-                            </h5>
-                        </div>
-                        <div class="card-body">
-                            @yield('content')
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-primary card-outline">
+                                <div class="card-header">
+                                    <h5 class="m-0">
+                                        @yield('title')
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    @yield('content')
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- /.content -->
         </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; {{ date('Y') }} <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.2.0
+            </div>
+        </footer>
     </div>
+    <!-- ./wrapper -->
 
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="/lte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/lte/dist/js/adminlte.js"></script>
 
-            <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Control sidebar content goes here -->
-            </aside>
-            <!-- /.control-sidebar -->
+    <!-- PAGE /lte/PLUGINS -->
+    <!-- jQuery Mapael -->
+    <script src="/lte/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="/lte/plugins/raphael/raphael.min.js"></script>
+    <script src="/lte/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+    <script src="/lte/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+    <!-- ChartJS -->
+    <script src="/lte/plugins/chart.js/Chart.min.js"></script>
 
-            <!-- Main Footer -->
-            <footer class="main-footer">
-                <strong>Copyright &copy; {{ date('Y') }} <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-                All rights reserved.
-                <div class="float-right d-none d-sm-inline-block">
-                    <b>Version</b> 3.2.0
-                </div>
-            </footer>
-        </div>
-        <!-- ./wrapper -->
+    <!-- AdminLTE for demo purposes -->
+    <script src="/lte/dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="/lte/dist/js/pages/dashboard2.js"></script>
 
-        <!-- REQUIRED SCRIPTS -->
-        <!-- jQuery -->
-        <script src="/lte/plugins/jquery/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="/lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- overlayScrollbars -->
-        <script src="/lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="/lte/dist/js/adminlte.js"></script>
-
-        <!-- PAGE /lte/PLUGINS -->
-        <!-- jQuery Mapael -->
-        <script src="/lte/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-        <script src="/lte/plugins/raphael/raphael.min.js"></script>
-        <script src="/lte/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-        <script src="/lte/plugins/jquery-mapael/maps/usa_states.min.js"></script>
-        <!-- ChartJS -->
-        <script src="/lte/plugins/chart.js/Chart.min.js"></script>
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="/lte/dist/js/demo.js"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="/lte/dist/js/pages/dashboard2.js"></script>
-
-        @stack('scripts')
+    @stack('scripts')
 
 </body>
 
