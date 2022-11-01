@@ -10,16 +10,17 @@
             {!! csrf_field() !!}
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-group">
+                    <div class="form-group @if ($errors->has('title')) has-error @endif">
                         <label for="" class="control-label">Title <span style="color: red">*</span></label>
                         <input type="text" class="form-control" name="title" placeholder="Title ...">
+                        {!! $errors->first('title', '<em for="title" class="text-danger fw-bold">:message</em>') !!}
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="form-group">
+                    <div class="form-group @if ($errors->has('description')) has-error @endif">
                         <label for="" class="control-label">Description <span style="color: red">*</span></label>
-                        <textarea class="form-control" name="description" id="description" cols="10" rows="10">
-                    </textarea>
+                        <textarea class="form-control" name="description" id="description" cols="10" rows="10"></textarea>
+                        {!! $errors->first('description', '<em for="description" class="text-danger fw-bold">:message</em>') !!}
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -64,9 +65,25 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            <div class="d-flex">
+                <div class="">
+                    <a href="{{old('previousUrl') ? old('previousUrl') : url()->previous()}}" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-reply"></i> @lang('auth.form_user_cancel_btn')</a>
+                </div>
+                <div class="text-end">
+                    <button type="submit" class="btn ladda-button btn-success btn-sm" data-style="zoom-in">
+                        <span class="ladda-label"><i class="fa fa-save"></i> @lang('auth.form_user_submit_btn')</span>
+                        <span class="ladda-spinner"><div class="ladda-progress" style="width: 0px;"></div></span></button>
+                </div>
+                {{-- <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4 text-end">
+
+                </div> --}}
             </div>
+
         </form>
     </div>
 @endsection
